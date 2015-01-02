@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Tamashi Themes">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Bamboo Documentation — Tamashi Themes</title>
+
+
+    <!-- CSS
+    ================================================== -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Documentation CSS -->
+    <link href="style.css" rel="stylesheet" />
+
+
+    <!-- FONTS
+    ================================================== -->
+
+    <!-- Main font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Font Awesome -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body data-spy="scroll" data-target=".tamashi-docs--menu">
+
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title"><img src="assets/img/logo.png"><h1>Bamboo Documentation <small>This file contains all you need to get started</small></h1></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 tamashi-docs--menu">
+          <ul class="nav list-group">
+            <li><a href="#installation" class="page-scroll list-group-item">Installation</a></li>
+            <li><a href="#page-structure" class="page-scroll list-group-item">Page structure</a></li>
+            <li><a href="#less" class="page-scroll list-group-item">Using LESS</a></li>
+            <li><a href="#animations" class="page-scroll list-group-item">Animations</a></li>
+            <li><a href="#fonts" class="page-scroll list-group-item">Edit the fonts</a></li>
+            <li><a href="#colour-schemes" class="page-scroll list-group-item">Edit colour schemes</a></li>
+            <li><a href="#logo" class="page-scroll list-group-item">Edit the logo</a></li>
+            <li><a href="#icons" class="page-scroll list-group-item">Edit the icons</a></li>
+            <li><a href="#navigation" class="page-scroll list-group-item">Edit the navigation</a></li>
+            <li><a href="#backgrounds" class="page-scroll list-group-item">Edit backgrounds</a></li>
+            <li><a href="#client-logo" class="page-scroll list-group-item">Add/remove client logo's</a></li>
+            <li><a href="#portfolio" class="page-scroll list-group-item">Add/remove portfolio items</a></li>
+            <li><a href="#testimonials" class="page-scroll list-group-item">Add/remove testimonials</a></li>
+            <li><a href="#contact-form" class="page-scroll list-group-item">Configure contact form</a></li>
+            <li><a href="#contact-map" class="page-scroll list-group-item">Configure Google Maps</a></li>
+            <li><a href="#social-icons" class="page-scroll list-group-item">Add/remove social icons</a></li>
+            <li><a href="#subscribe" class="page-scroll list-group-item">Subscribe</a></li>
+            <li><a href="#ftp" class="page-scroll list-group-item">FTP</a></li>
+          </ul>
+        </div>
+        <div class="col-md-8 main">
+          <section class="tamashi-docs" id="installation">
+            <h1>Installation</h1>
+            <p>First of all, thank you for purchasing this Bootstrap theme, your support makes it all possible!</p>
+
+            <p>This webpage takes you by hand on how to install this theme and will explain all technical details. If you are having difficulties when editing the theme I encourage you to read this page very thoroughly! You'll most likely find your answer here.</p>
+            <ol class="normal-ol">
+              <li>Unzip the downloaded file <code>tamashi-bamboo-1.0.0.rar</code> to a new folder that you can name however you'd like. Your unzipped file will contain 2 folders. One is a folder named <strong>'documentation'</strong> to guide you through customizing the theme and the second one is named <strong>'theme'</strong> which is the actual one that holds all the files and folders you will be working with.</li>
+              <li>Once your site is completed you will need to upload these files to your Web Server using FTP in order to use it on your website.</li>
+              <li>Make sure you upload the required files/folders listed below (don't upload the documentation folder):
+                <ul>
+                  <li><code>assets/</code> - Asset folder containing Bootstrap, LESS files, images, scripts and CSS</li>
+                  <li><code>index.html</code> - Theme HTML</li>
+                  <li><code>style.css</code> - Theme CSS</li>
+                </ul>           
+              </li>
+              <li>Congratulations! Add your content and you'll be ready to launch your brand new website!</li>
+            </ol>
+          </section>
+          <section class="tamashi-docs" id="page-structure">
+            <h1>Page Structure</h1>
+            <p>All the content will be wrapped by the <code>body</code>, a data-spy will be attached to update nav targets based on scroll position.</p>
+            <pre class="prettyprint linenums">
+&lt;body id=&quot;top&quot; data-spy=&quot;scroll&quot; data-offset=&quot;75&quot; data-target=&quot;.navbar-fixed-top&quot;&gt;
+   ...
+&lt;/body&gt;</pre>
+          <h3>Bamboo consists out of 10 areas:</h3>
+          <ol class="normal-ol">
+            <li>Navbar/Header <code>Nav</code></li>
+            <li>Intro section <code>#intro</code></li>
+            <li>About section <code>#about</code></li>
+            <li>Team section <code>#team</code></li>
+            <li>Portfolio section <code>#portfolio</code></li>
+            <li>Pricing section <code>#pricing</code></li>
+            <li>Features section <code>#features</code></li>
+            <li>Testimonials section <code>#testimonials</code></li>
+            <li>Contact section <code>#contact</code></li>
+            <li>Footer <code>Footer</code></li>
+          </ol>
+          </section>
+          <section class="tamashi-docs" id="less">
+            <h1>Using LESS</h1>
+            <p>Bamboo can be easily customized using LESS, all the theme specific files can be found in <code>assets/less/theme</code>. After you've editted your LESS files simple compile the file <code>style.less</code> and you will have a brand new customized CSS file!</p>
+          </section>
+          <section class="tamashi-docs" id="animations">
+            <h1>Animations</h1>
+            <p>For the animations we use <a href="http://mynameismatthieu.com/WOW/">wow.js</a>. Here's a brief overview on how to modify or add/remove your own animations:</p>
+
+            <h3>Make an element revealable</h3>
+            <p>Add the CSS class .wow to a HTML element: it will be invisible until the user scrolls to reveal it.</p>
+            <pre class="prettyprint linenums">
+&lt;div class=&quot;wow&quot;&gt;  Content to Reveal Here  &lt;/div &gt;</pre>
+            <h3>Choose the animation style</h3>
+            <p>Pick an animation style in <a href="http://daneden.github.io/animate.css/">Animate.css</a> , then add the CSS class to the HTML element</p>
+            <pre class="prettyprint linenums">
+&lt;div class=&quot;wow bounceInUp&quot;&gt;  Content to Reveal Here  &lt;/div &gt;</pre>
+            <p>Voila! The basics to get up and running with wow.js. Want more? Read the full documentation on wow.js <a href="http://mynameismatthieu.com/WOW/docs.html">here</a>.</p>
+          </section>
+          <section class="tamashi-docs" id="fonts">
+            <h1>Fonts</h1>
+            <p>Bootstrap utilizes 3 different fonts:<p>
+              <ol class="normal-ol">
+                <li><strong>Lato</strong>, the main font</li>
+                <li><strong>Montserrat</strong>, the font for the intro section heading</li>
+                <li><strong>Varela Round</strong>, used for sub-headings</li>
+              </ol>
+              <p>These fonts can be edited or removed in the <code>head</code> section of the <code>index.html</code> and then in the <code>bamboo-variables.less</code> document. Located in <code>assets/less/theme</code> from line 45 and 47.</p>
+          </section>
+          <section class="tamashi-docs" id="colour-schemes">
+            <h1>Colour Schemes</h1>
+            <p>Bamboo consists out of 4 colours, 1 main colour, 1 secondary colour and 1 tertiary colour, paired with a 'cool gray'.</p>
+
+            <div class="row">
+              <div class="col-md-3 primary"><div class="swatch"></div><div class="hex"><p>Primary / #96c93d</p></div></div>
+              <div class="col-md-3 secondary"><div class="swatch"></div><div class="hex"><p>Secondary / #25aae1</p></div></div>
+              <div class="col-md-3 tertiary"><div class="swatch"></div><div class="hex"><p>Tertiary / #cb5c5a</p></div></div>
+              <div class="col-md-3 gray"><div class="swatch"></div><div class="hex"><p>Cool Gray / #212f3c</p></div></div>
+            </div>
+
+            <p>These colours are easily editable site-wide in the <code>bamboo-variables.less</code> document. Located in <code>assets/less/theme</code> from line 1 to line 18. Edit them to match your brand!</p>
+          </section>
+          <section class="tamashi-docs" id="logo">
+            <h1>Logo</h1>
+            <p>The logo can be modified in the navbar area of the theme:<p>
+            <pre class="prettyprint linenums">
+&lt;a class=&quot;page-scroll navbar-brand&quot; href=&quot;#top&quot;&gt; Bamboo&lt;/a&gt;</pre>
+            <p>After changing the text you can modify the icon in the <code>bamboo-navbar.less</code> file. Located in <code>assets/less/theme</code>. Change the content value of <code>navbar-brand:before</code> with the value of the icon you'd like to use.</p>
+            <pre class="prettyprint linenums">
+.navbar-brand {<br/>  color: #fff;<br/>  font-size: @navbar-bamboo-brand-size;<br/>  font-family: @navbar-bamboo-brand-font-family;<br/>  letter-spacing: -0.5px;<br/>  line-height: 16px;<br/>  &amp;:hover,<br/>  &amp;:focus {<br/>    background-color: transparent;<br/>  }<br/>  &amp;:before {<br/>    font-family: &quot;outlined-iconset&quot;;<br/>    content: &quot;\e006&quot;; //Change this value to swap icons<br/>    vertical-align: middle;<br/>    padding-bottom: 6px;<br/>    color: @brand-primary;<br/>  }<br/>}</pre>
+          <p><a target="blank" href="assets/fonts/icons-reference.html"> Click here</a> for a complete list of available icons.</p>
+          <h3>Using an image</h3>
+          <p>If you already have a logo then feel free to replace the syntax with an image like so:</p>
+          <pre class="prettyprint linenums">
+&lt;a class=&quot;page-scroll navbar-brand&quot; href=&quot;#top&quot;&gt;&lt;img src=&quot;assets/img/your-logo.png&quot; class=&quot;img-responsive&quot;&gt;&lt;/a&gt;</pre>
+          <p class="bg-warning">Note: make sure you use a transparent .png image to make the logo blend in well with the navbar.</p>
+          <p>After inserting the image make sure you remove the CSS that generates the icon:</p>
+          <pre class="prettyprint linenums">
+&amp;:before {<br/>  font-family: &quot;outlined-iconset&quot;;<br/>  content: &quot;\e006&quot;; //Change this value to swap icons<br/>  vertical-align: middle;<br/>  padding-bottom: 6px;<br/>  color: @brand-primary;<br/>}</pre>
+          <p class="bg-warning">Note: when using an image it's most likely that you'll have to adjust the padding of <strong>.navbar-brand</strong>.</p>
+          </section>
+          <section class="tamashi-docs" id="icons">
+            <h1>Icons</h1>
+            <p>Bamboo uses a set of 150 outlined icons made by <a href="https://www.behance.net/darioferrando">Dario Ferrande</a> and can be found <a href="http://freebiesbug.com/psd-freebies/150-free-outlined-icons-psd-ai-svg-webfont/">here</a>.<p>A list of these fonts and their mappings can be found <a target="blank" href="assets/fonts/icons-reference.html">here</a>.
+          </section>
+          <section class="tamashi-docs" id="navigation">
+            <h1>Navigation</h1>
+            <p>The navigation can be found in the <code>#navigation</code> div. The navbar is transparent on default and the behaviour on scroll can be modifief in the <code>bamboo-navbar.less</code> file. Located in <code>assets/less/theme</code> from line 147 to 296. The initial transparent navbar looks good on a dark background, if in case you have a light background you can change <code>navbar-bamboo</code> to <code>navbar-bamboo-alt</code>.</p><p> If the navbar contains a navbar right in the example, then a duplicate version will be added to the main navigation, but hidden for desktop view. When resized to the tablet format the normal <code>.navbar-right</code> will be hidden and the duplicate will be shown so that there's more space for the navigation.</p>
+            <pre class="prettyprint linenums">
+&lt;nav id=&quot;navigation&quot; class=&quot;navbar navbar-bamboo navbar-fixed-top&quot; role=&quot;navigation&quot;&gt;<br/>  &lt;div class=&quot;container&quot;&gt;<br/>    &lt;div class=&quot;navbar-header&quot;&gt;<br/>      &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-ex1-collapse&quot;&gt;<br/>        &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;<br/>        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;<br/>        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;<br/>        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;<br/>      &lt;/button&gt;<br/>      &lt;a class=&quot;page-scroll navbar-brand&quot; href=&quot;#top&quot;&gt; Bamboo&lt;/a&gt;<br/>    &lt;/div&gt; &lt;!-- /.navbar-header --&gt;<br/>    <br/>    &lt;!-- Collect the nav links, forms, and other content for toggling --&gt;<br/>    &lt;div class=&quot;collapse navbar-collapse navbar-ex1-collapse&quot;&gt;<br/>      &lt;ul class=&quot;nav navbar-nav&quot;&gt;<br/>        &lt;!-- Hidden li included to remove active class from about link when scrolled up past about section --&gt;<br/>        &lt;li class=&quot;hidden&quot;&gt;&lt;a href=&quot;#top&quot;&gt;&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li&gt;&lt;a href=&quot;#about&quot; class=&quot;page-scroll&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li&gt;&lt;a href=&quot;#team&quot; class=&quot;page-scroll&quot;&gt;Team&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li&gt;&lt;a href=&quot;#portfolio&quot; class=&quot;page-scroll&quot;&gt;Portfolio&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li&gt;&lt;a href=&quot;#pricing&quot; class=&quot;page-scroll&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li&gt;&lt;a href=&quot;#features&quot; class=&quot;page-scroll&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li&gt;&lt;a href=&quot;#testimonials&quot; class=&quot;page-scroll&quot;&gt;Testimonials&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li&gt;&lt;a href=&quot;#contact&quot; class=&quot;page-scroll&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li class=&quot;dropdown dropdown-right hidden-lg hidden-md&quot;&gt;<br/>          &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Sign up &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;<br/>          &lt;ul class=&quot;dropdown-menu&quot;&gt;<br/>            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Login&lt;/a&gt;&lt;/li&gt;<br/>            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Create account&lt;/a&gt;&lt;/li&gt;<br/>          &lt;/ul&gt;<br/>        &lt;/li&gt;<br/>        &lt;li class=&quot;hidden-lg hidden-md&quot;&gt;&lt;a href=&quot;#&quot;&gt;Shortcodes&lt;/a&gt;&lt;/li&gt;<br/>      &lt;/ul&gt;<br/>      &lt;ul class=&quot;nav navbar-nav navbar-right hidden-sm hidden-xs&quot;&gt;<br/>        &lt;li class=&quot;dropdown dropdown-right&quot;&gt;<br/>          &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Sign up &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;<br/>          &lt;ul class=&quot;dropdown-menu&quot;&gt;<br/>            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Login&lt;/a&gt;&lt;/li&gt;<br/>            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Create account&lt;/a&gt;&lt;/li&gt;<br/>          &lt;/ul&gt;<br/>        &lt;/li&gt;<br/>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Shortcodes&lt;/a&gt;&lt;/li&gt;<br/>      &lt;/ul&gt;<br/>    &lt;/div&gt;  &lt;!-- /.navbar-collapse --&gt;<br/>  &lt;/div&gt; &lt;!-- /.container --&gt;<br/>&lt;/nav&gt;</pre>
+
+          <h3>Skewed links</h3>
+          <p>The navigation links are skewed to match the theme, if you don't like it this way then you can find the necessary CSS to modify it in the <code>bamboo-navbar.less</code> file. Located in <code>assets/less/theme</code> on line 34 and 46.
+          <pre class="prettyprint linenums">
+&gt; li {<br/>  transform: skewX(-27deg);  // Skew button to match theme<br/>  border-right: 1px solid transparent;<br/>  -webkit-transition: all .5s ease-in-out;<br/>  -moz-transition: all .5s ease-in-out;<br/>  transition: all .5s ease-in-out;<br/>  &amp;:nth-child(1) {<br/>    border-left: 1px solid transparent;<br/>  }<br/>}<br/>&gt; li &gt; a {<br/>  color: fade(#fff, 50%);<br/>  font-size: @navbar-font-size;<br/>  transform: skewX(27deg); // Skew button to match theme, needs to be positive value of the li<br/>  -webkit-transition: all .5s ease-in-out;<br/>  -moz-transition: all .5s ease-in-out;<br/>  transition: all .5s ease-in-out;<br/>  &amp;:hover,<br/>  &amp;:focus {<br/>    color: #fff;<br/>    background-color: @navbar-bamboo-link-hover-bg;<br/>  }<br/>}</pre>
+          <p>Bamboo's navigation is skewed by 27 degrees as you can see in the example, edit it to fit your needs!</p>
+          </section>
+          <section class="tamashi-docs" id="backgrounds">
+            <h1>Backgrounds</h1>
+            <p>Bamboo utilizes 3 kinds of backgrounds:</p>
+            <ol class="normal-ol">
+              <li><strong>The intro background</strong></li>
+              <li><strong>Even background color</strong></li>
+              <li><strong>Odd background color</strong></li>
+            </ol>
+            <h3>Intro background</h3>
+            <p>The intro background can be modifief in the <code>bamboo-intro-section.less</code> file. Located in <code>assets/less/theme</code>.</p>
+            <pre class="prettyprint linenums">
+background: url(assets/img/theme-bg.jpg) no-repeat bottom center scroll;</pre>
+            <p>Change the file <code>theme-bg.jpg</code> to modify the background.</p>
+            <h3>Even background color</h3>
+            <p>The background color of the even sections is <code>#f6f8fa</code> and can be modifief in the <code>bamboo-global-section.less</code> file. Located in <code>assets/less/theme</code> on line 35.</p>
+            <h3>Odd background color</h3>
+            <p>The background color of the odd sections is <code>#ffffff</code> and can be modifief in the <code>bamboo-global-section.less</code> file. Located in <code>assets/less/theme</code> on line 11.</p>
+          </section>
+          <section class="tamashi-docs" id="client-logo">
+            <h1>Client logo's</h1>
+            <p>Client logo's can be found in <code>assets/img/clients</code> and are numbered 1 through 6. You can add or remove logo's in the <code>#client</code> section, they are wrapped within <code>li</code> tags:</p>
+            <pre class="prettyprint linenums">
+&lt;section id=&quot;clients&quot; class=&quot;bamboo-clients-section&quot;&gt;<br/>  &lt;h3&gt;Our finest clients&lt;/h3&gt;<br/>  &lt;div class=&quot;container&quot;&gt;<br/>    &lt;div class=&quot;row&quot;&gt;<br/>      &lt;ul&gt;<br/>        &lt;li class=&quot;wow fadeInLeft&quot; data-wow-delay=&quot;0.2s&quot; data-wow-offset=&quot;20&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;Client 1&quot; src=&quot;<br/>assets/img/clients/1.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li class=&quot;wow fadeInLeft&quot; data-wow-delay=&quot;0.4s&quot; data-wow-offset=&quot;20&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;Client 2&quot; src=&quot;<br/>assets/img/clients/2.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li class=&quot;wow fadeInLeft&quot; data-wow-delay=&quot;0.6s&quot; data-wow-offset=&quot;20&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;Client 3&quot; src=&quot;<br/>assets/img/clients/3.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li class=&quot;wow fadeInLeft&quot; data-wow-delay=&quot;0.8s&quot; data-wow-offset=&quot;20&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;Client 4&quot; src=&quot;<br/>assets/img/clients/4.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li class=&quot;wow fadeInLeft&quot; data-wow-delay=&quot;1.0s&quot; data-wow-offset=&quot;20&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;Client 5&quot; src=&quot;<br/>assets/img/clients/5.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;<br/>        &lt;li class=&quot;wow fadeInLeft&quot; data-wow-delay=&quot;1.2s&quot; data-wow-offset=&quot;20&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;Client 6&quot; src=&quot;<br/>assets/img/clients/6.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;<br/>      &lt;/ul&gt;<br/>    &lt;/div&gt; &lt;!-- /.row --&gt;<br/>  &lt;/div&gt; &lt;!-- /.container --&gt;<br/>&lt;/section&gt;</pre>
+          </section>
+          <section class="tamashi-docs" id="portfolio">
+            <h1>Portfolio</h1>
+            <p>The Bamboo portfolio is filterable, configure the categories in the <code>.nav-pills</code> div.</p>
+            <pre class="prettyprint linenums">
+&lt;ul class=&quot;nav nav-pills&quot;&gt;<br/>  &lt;li class=&quot;active&quot; data-group=&quot;all&quot;&gt;&lt;a href=&quot;#&quot;&gt;All&lt;/a&gt;&lt;/li&gt;<br/>  &lt;li data-group=&quot;branding&quot;&gt;&lt;a href=&quot;#&quot;&gt;Branding&lt;/a&gt;&lt;/li&gt;<br/>  &lt;li data-group=&quot;web&quot;&gt;&lt;a href=&quot;#&quot;&gt;Web Design&lt;/a&gt;&lt;/li&gt;<br/>  &lt;li data-group=&quot;logo&quot;&gt;&lt;a href=&quot;#&quot;&gt;Logo Design&lt;/a&gt;&lt;/li&gt;<br/>  &lt;li data-group=&quot;photography&quot;&gt;&lt;a href=&quot;#&quot;&gt;Photography&lt;/a&gt;&lt;/li&gt;<br/>&lt;/ul&gt;</pre>
+            <p>After you've defined your <code>data-groups</code> you can add portfolio items in the <code>#grid</code> div according to the example, make sure your <code>data-groups</code> are the same!</p>
+            
+            <pre class="prettyprint linenums">
+&lt;li class=&quot;col-md-3 col-sm-6 col-xs-6 portfolio-item&quot; data-src=&quot;assets/img/portfolio/1-full.jpg&quot; data-groups='[<br/>&quot;all&quot;, &quot;branding&quot;]'&gt;<br/>  &lt;div class=&quot;portfolio-thumbnail&quot;&gt;<br/>    &lt;div class=&quot;caption&quot;&gt;&lt;h4&gt;Sleek UI Kit&lt;br&gt;&lt;small&gt;Web Design&lt;/small&gt;&lt;/h4&gt;&lt;/div&gt;<br/>    &lt;img class=&quot;img-responsive&quot; src=&quot;assets/img/portfolio/1.jpg&quot; alt=&quot;portfolio-item&quot;&gt;<br/>  &lt;/div&gt; &lt;!-- /.portfolio-thumbnail --&gt;<br/>&lt;/li&gt;</pre>
+
+            <p class="bg-warning">Note: Bamboo requires a seperate image for the thumbnail and the full image, the thumbnail's dimension is <strong>270 × 200</strong> and full image dimension is <strong>864 × 620</strong>.</p>
+          </section>
+          <section class="tamashi-docs" id="testimonials">
+            <h1>Testimonials</h1>
+            <p>Everyone knows that testimonials are a powerful way to let your visitors know about the work you did, and can often have a more powerful impact then a work example. So show off those testimonials! The testimonials are simple <code>li's</code> within a <code>ul</code> and you can add as much as you'd like:</p>
+            <pre class="prettyprint linenums">
+&lt;li class=&quot;testimonial&quot;&gt;<br/>  &lt;blockquote&gt;<br/>    &lt;div class=&quot;row&quot;&gt;<br/>      &lt;div class=&quot;col-md-offset-4 col-md-4&quot;&gt;<br/>        &lt;p&gt;Lorem ipsum dolor sit amet, casdasdlandit, eget pretium nisl accumsan. Sed ultricies commodo tortoreu pretium mauris.&lt;/p&gt;<br/>        &lt;small&gt;Someone famous&lt;/small&gt;<br/>      &lt;/div&gt;<br/>    &lt;/div&gt;<br/>  &lt;/blockquote&gt;<br/>&lt;/li&gt;</pre>
+          <p>The <code>p</code> tag contains the testimonial and the <code>small</code> tag contains the name of the person who stated it.</p>
+          </section>
+          <section class="tamashi-docs" id="contact-form">
+            <h1>Contact form</h1>
+            <p>The Bamboo contact form is fully functional right out of the package, spiffy! Open the file <code>processForm-contact.php</code> located in the <code>assets/email</code> folder and edit these lines:</p>
+            <pre class="prettyprint linenums">
+define( &quot;RECIPIENT_NAME&quot;, &quot;Your name&quot; );<br/>define( &quot;RECIPIENT_EMAIL&quot;, &quot;myemail@gmail.com&quot; );<br/>define( &quot;EMAIL_SUBJECT&quot;, &quot;Visitor Message&quot; );</pre>
+          </section>
+          <section class="tamashi-docs" id="contact-map">
+            <h1>Google Maps</h1>
+            <p>The map location and marker position can de edited in the <code>assets/js/main.js</code> file from line 30 to 43.
+            <pre class="prettyprint linenums">
+// Init Google Maps<br/>$(document).ready(function(){<br/>  map = new GMaps({<br/>    div: '#bamboo-map',<br/>    lat: -12.043333,<br/>    lng: -77.028333,<br/>    enableNewStyle: true<br/>  });<br/>  map.addMarker({<br/>    lat: -12.043333,<br/>    lng: -77.028333,<br/>    title: 'Location'<br/>  });<br/>});</pre>
+          <p>Change the latitude and longitude to move the map around, these values can easily be found on Google.</p>
+          </section>
+          <section class="tamashi-docs" id="social-icons">
+            <h1>Social icons</h1>
+            <p>The footer houses room for a ton of social icons, all available icons can be found in <code>assets/img/social/32px</code>. Add or remove them as you see fit.</p>
+            <pre class="prettyprint linenums">
+&lt;ul&gt;<br/>  &lt;li&gt;&lt;img src=&quot;assets/img/social/32px/Facebook.png&quot;&gt;&lt;/li&gt;<br/>  &lt;li&gt;&lt;img src=&quot;assets/img/social/32px/Twitter.png&quot;&gt;&lt;/li&gt;<br/>  &lt;li&gt;&lt;img src=&quot;assets/img/social/32px/Dribbble.png&quot;&gt;&lt;/li&gt;<br/>  &lt;li&gt;&lt;img src=&quot;assets/img/social/32px/Linkedin.png&quot;&gt;&lt;/li&gt;<br/>  &lt;li&gt;&lt;img src=&quot;assets/img/social/32px/Instagram.png&quot;&gt;&lt;/li&gt;<br/>  &lt;li&gt;&lt;img src=&quot;assets/img/social/32px/Behance.png&quot;&gt;&lt;/li&gt;<br/>  &lt;li&gt;&lt;img src=&quot;assets/img/social/32px/Github.png&quot;&gt;&lt;/li&gt;<br/>  &lt;li&gt;&lt;img src=&quot;assets/img/social/32px/Flickr.png&quot;&gt;&lt;/li&gt;<br/>  &lt;li&gt;&lt;img src=&quot;assets/img/social/32px/Youtube.png&quot;&gt;&lt;/li&gt;<br/>  &lt;li&gt;&lt;img src=&quot;assets/img/social/32px/Tumblr.png&quot;&gt;&lt;/li&gt;<br/>  &lt;li&gt;&lt;img src=&quot;assets/img/social/32px/Spotify.png&quot;&gt;&lt;/li&gt;<br/>  &lt;li&gt;&lt;img src=&quot;assets/img/social/32px/DeviantART.png&quot;&gt;&lt;/li&gt;<br/>&lt;/ul&gt;</pre>
+          </section>
+          <section class="tamashi-docs" id="subscribe">
+            <h1>Subscribe</h1>
+            <p>The footer houses room for a subscribe feature, you can integrate it with services like <a href="http://mailchimp.com/">Mailchimp</a>.
+          </section>
+          <section class="tamashi-docs" id="ftp">
+            <h1>Uploading to your FTP server</h1>
+            
+            <p>Congratulation, you should now be done editing your website! Upload all the files and folders from your main <code>'theme'</code> folder to the root of your remote server.</p>  
+      
+            <p>We recommend using <a href="https://filezilla-project.org/download.php?type=client">Filezilla</a> to upload your files. It is fast and easy to use.</p>
+            <p class="bg-warning">Note: Make sure you don't upload the 'documentation' folder.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="text-center">Bamboo Theme Documentation.<br>&copy; Tamashi Themes. All Rights Reserved</p>
+    </footer>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+
+    <!-- Jquery Core -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <!-- Google Prettify -->
+    <link href="assets/css/prettify/prettify.css" rel="stylesheet">
+    <script src="assets/js/prettify/prettify.js"></script>
+
+    <script type="text/javascript">
+      !function ($) {
+        $(function(){
+          window.prettyPrint && prettyPrint()   
+        })
+      }(window.jQuery)
+    </script>
+
+    <script src="assets/js/stickyMojo.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('.tamashi-docs--menu').stickyMojo({footerID: 'footer', contentID: '.main'});
+      });
+    </script>
+
+    <script src="assets/js/jquery.easing.min.js"></script>
+
+    <script type="text/javascript">
+      //jQuery for page scrolling feature - requires jQuery Easing plugin
+      $(function() {
+          $('.page-scroll').bind('click', function(event) {
+              var $anchor = $(this);
+              $('html, body').stop().animate({
+                  scrollTop: $($anchor.attr('href')).offset().top
+              }, 1500, 'easeInOutExpo');
+              event.preventDefault();
+          });
+      });
+    </script>
+
+  </body>
+</html>  
